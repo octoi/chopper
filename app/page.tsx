@@ -1,3 +1,9 @@
+'use client';
+
+import { trpc } from '@/lib/trpc';
+
 export default function HomePage() {
-  return <div>Hello world</div>;
+  const result = trpc.user.hello.useQuery();
+
+  return <div></div>;
 }
