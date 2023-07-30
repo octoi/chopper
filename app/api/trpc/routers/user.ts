@@ -17,7 +17,7 @@ export const userRouter = router({
         profile: z.string(),
       })
     )
-    .query(async ({ input }) => {
+    .mutation(async ({ input }) => {
       try {
         input.password = await bcrypt.hash(input.password, 10);
 
